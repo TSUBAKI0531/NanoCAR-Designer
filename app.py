@@ -13,6 +13,13 @@ recognition modular CAR-T constructs.
   7. PK / safety simulation
 """
 
+import sys
+from pathlib import Path
+
+# Streamlit Cloud mounts the repo at /mount/src/<repo-name>/.
+# Ensure the repo root is on sys.path so `from src.xxx` resolves correctly.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
