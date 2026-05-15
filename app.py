@@ -806,7 +806,7 @@ def render_step6() -> None:
         else:
             html = render_3d_viewer(pdb_data, color_scheme=color_scheme)
 
-        st.html(html, height=520)
+        st.iframe(html, height=520)
 
         # Download PDB
         st.download_button(
