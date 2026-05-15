@@ -20,13 +20,13 @@ import streamlit.components.v1 as components
 from dataclasses import asdict
 
 # --- Module imports ---
-from modules.biomarker import (
+from biomarker import (
     fetch_from_uniprot,
     parse_manual_input,
     get_extracellular_domains,
     calculate_basic_properties,
 )
-from modules.nanobody import (
+from nanobody import (
     search_known_nanobodies,
     load_framework_templates,
     get_cdr_guidelines,
@@ -35,32 +35,32 @@ from modules.nanobody import (
     validate_nanobody,
     NanobodyCandidate,
 )
-from modules.tag_system import (
+from tag_system import (
     load_tag_database,
     get_tag_by_name,
     compare_tags,
     recommend_tag,
     get_radar_chart_data,
 )
-from modules.fusion_designer import (
+from fusion_designer import (
     load_linker_library,
     design_fusion,
     calculate_properties,
 )
-from modules.car_builder import (
+from car_builder import (
     build_car,
     get_car_summary,
     list_available_domains,
     load_domain_library,
 )
-from modules.structure_viewer import (
+from structure_viewer import (
     predict_structure,
     render_3d_viewer,
     visualize_fusion_construct,
     visualize_car_domains,
     lookup_alphafold_db,
 )
-from modules.pk_simulator import (
+from pk_simulator import (
     PKParameters,
     simulate_on_off_dynamics,
     generate_pk_report,

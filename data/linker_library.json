@@ -1,0 +1,103 @@
+{
+  "linkers": [
+    {
+      "id": "GGGGS_1x",
+      "name": "(G4S)×1",
+      "sequence": "GGGGS",
+      "type": "flexible",
+      "length_aa": 5,
+      "approx_length_nm": 1.8,
+      "description": "Minimal flexible linker. May be insufficient for independent domain folding.",
+      "recommended_for": ["Small tags", "Closely interacting domains"],
+      "not_recommended_for": ["Large domains requiring independent folding"]
+    },
+    {
+      "id": "GGGGS_2x",
+      "name": "(G4S)×2",
+      "sequence": "GGGGSGGGGS",
+      "type": "flexible",
+      "length_aa": 10,
+      "approx_length_nm": 3.5,
+      "description": "Short flexible linker. Good balance of flexibility and compactness.",
+      "recommended_for": ["General Nb-tag fusions", "Compact constructs"],
+      "not_recommended_for": []
+    },
+    {
+      "id": "GGGGS_3x",
+      "name": "(G4S)×3",
+      "sequence": "GGGGSGGGGSGGGGS",
+      "type": "flexible",
+      "length_aa": 15,
+      "approx_length_nm": 5.3,
+      "description": "Standard flexible linker widely used in scFv and fusion proteins.",
+      "recommended_for": ["Standard Nb-tag fusions", "scFv constructs"],
+      "not_recommended_for": []
+    },
+    {
+      "id": "GGGGS_4x",
+      "name": "(G4S)×4",
+      "sequence": "GGGGSGGGGSGGGGSGGGGS",
+      "type": "flexible",
+      "length_aa": 20,
+      "approx_length_nm": 7.0,
+      "description": "Long flexible linker. Ensures complete domain independence.",
+      "recommended_for": ["Large tag systems", "When steric clash is a concern"],
+      "not_recommended_for": ["Compact constructs where rigidity is desired"]
+    },
+    {
+      "id": "EAAAK_1x",
+      "name": "(EAAAK)×1",
+      "sequence": "EAAAK",
+      "type": "rigid",
+      "length_aa": 5,
+      "approx_length_nm": 0.75,
+      "description": "Rigid α-helical linker. Maintains spatial separation between domains.",
+      "recommended_for": ["Preventing domain interaction", "Fixed orientation"],
+      "not_recommended_for": ["When flexibility is needed for binding"]
+    },
+    {
+      "id": "EAAAK_2x",
+      "name": "(EAAAK)×2",
+      "sequence": "EAAAKEAAAK",
+      "type": "rigid",
+      "length_aa": 10,
+      "approx_length_nm": 1.5,
+      "description": "Medium rigid linker with stable helical structure.",
+      "recommended_for": ["Bifunctional proteins", "Maintaining domain orientation"],
+      "not_recommended_for": ["When conformational flexibility is required"]
+    },
+    {
+      "id": "EAAAK_3x",
+      "name": "(EAAAK)×3",
+      "sequence": "EAAAKEAAAKEAAAK",
+      "type": "rigid",
+      "length_aa": 15,
+      "approx_length_nm": 2.25,
+      "description": "Long rigid linker forming continuous α-helix.",
+      "recommended_for": ["Maximum spatial separation with rigidity"],
+      "not_recommended_for": ["Compact constructs"]
+    },
+    {
+      "id": "XTEN_16",
+      "name": "XTEN-16",
+      "sequence": "SGSETPGTSESATPES",
+      "type": "flexible_extended",
+      "length_aa": 16,
+      "approx_length_nm": 5.6,
+      "description": "Unstructured, hydrophilic linker. Resists proteolysis and aggregation. Extended PK.",
+      "recommended_for": ["In vivo applications", "PK extension", "Reducing immunogenicity"],
+      "not_recommended_for": ["Minimal-size constructs"]
+    },
+    {
+      "id": "proline_rich",
+      "name": "Proline-rich linker",
+      "sequence": "PAPAPAPAP",
+      "type": "semi_rigid",
+      "length_aa": 9,
+      "approx_length_nm": 3.0,
+      "description": "Semi-rigid linker with PPII helix. Good protease resistance.",
+      "recommended_for": ["Protease-resistant applications", "Moderate rigidity"],
+      "not_recommended_for": ["When full flexibility is needed"]
+    }
+  ]
+}

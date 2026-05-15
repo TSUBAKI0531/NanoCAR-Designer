@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "id": "h_NbBcII10",
+      "name": "Humanized NbBcII10",
+      "description": "Most widely used humanized VHH framework, derived from anti-lysozyme NbBcII10. Excellent stability and expression.",
+      "organism_origin": "Llama (Lama glama), humanized",
+      "fr1": "EVQLVESGGGLVQPGGSLRLSCAAS",
+      "fr2": "WVRQAPGKGLEWVS",
+      "fr3": "RFTISRDNSKNTLYLQMNSLRAEDTAVYYC",
+      "fr4": "WGQGTLVTVSS",
+      "hallmark_residues": {"42": "F/Y", "49": "E", "50": "R", "52": "G"},
+      "expression_host": ["E.coli", "CHO", "HEK293"],
+      "thermal_stability_tm": 68.5,
+      "notes": "Standard framework for most VHH humanization projects"
+    },
+    {
+      "id": "h_cAb_BMP2",
+      "name": "Humanized cAbBMP2",
+      "description": "Framework derived from anti-BMP2 camelid antibody. Good for targets requiring long CDR3 loops.",
+      "organism_origin": "Camel (Camelus dromedarius), humanized",
+      "fr1": "QVQLVESGGGLVQAGGSLRLSCAAS",
+      "fr2": "WYRQAPGKEREFVA",
+      "fr3": "RFTISRDNAKNTVYLQMNSLKPEDTAVYYC",
+      "fr4": "WGQGTQVTVSS",
+      "hallmark_residues": {"42": "F", "49": "E", "50": "R", "52": "G"},
+      "expression_host": ["E.coli", "Pichia"],
+      "thermal_stability_tm": 72.0,
+      "notes": "Higher thermal stability, suitable for long CDR3"
+    },
+    {
+      "id": "h_VHH_72",
+      "name": "Universal VHH-72 Framework",
+      "description": "Broad-spectrum framework from VHH-72 (anti-SARS-CoV). Validated in multiple therapeutic contexts.",
+      "organism_origin": "Llama, humanized",
+      "fr1": "QVQLQESGGGLVQAGGSLRLSCAAS",
+      "fr2": "WYRQAPGKEREWVA",
+      "fr3": "RFTISRDNAKNTVYLQMNSLKPEDTAVYYC",
+      "fr4": "WGQGTQVTVSS",
+      "hallmark_residues": {"42": "F", "49": "E", "50": "R", "52": "G"},
+      "expression_host": ["E.coli", "CHO", "HEK293"],
+      "thermal_stability_tm": 65.0,
+      "notes": "Well-characterized in COVID-19 therapeutic context"
+    }
+  ],
+  "cdr_length_guidelines": {
+    "CDR1": {"typical_length": [5, 8], "imgt_positions": "27-38", "notes": "Usually 5-8 residues in VHH"},
+    "CDR2": {"typical_length": [4, 8], "imgt_positions": "56-65", "notes": "Can be shorter than conventional VH"},
+    "CDR3": {"typical_length": [6, 25], "imgt_positions": "105-117", "notes": "Highly variable, often longer in VHH than VH. Extended CDR3 enables binding to concave epitopes"}
+  },
+  "conserved_residues": {
+    "Cys22": "Disulfide bond (conserved)",
+    "Cys92": "Disulfide bond (conserved)",
+    "Trp36": "Hydrophobic core (conserved in most VHH)",
+    "Gly/Ala44": "VHH hallmark position (Gly44 in camelid, vs Val/Leu in human VH)"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "recognition_domains": {
+    "anti_5B9_scFv": {
+      "name": "Anti-5B9 scFv",
+      "sequence": "DIQMTQSPSSLSASVGDRVTITCRASQSISSYLNWYQQKPGKAPKLLIYAASSLQSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQSYSTPLTFGGGTKVEIKGGGGSGGGGSGGGGSGGGGSEVQLVESGGGLVQPGGSLRLSCAASGFTFSSYAMSWVRQAPGKGLEWVSAISGSGGSTYYADSVKGRFTISRDNSKNTLYLQMNSLRAEDTAVYYCAKDRGYRYYGSSHWYFDVWGQGTLVTVSS",
+      "target_tag": "5B9",
+      "type": "scFv",
+      "source": "UniCAR platform, Albert et al."
+    },
+    "anti_GCN4_scFv": {
+      "name": "Anti-GCN4 scFv (52SR4)",
+      "sequence": "DIQMTQSPSSLSASVGDRVTITCRASQDIRNYLAWYQQKPGKAPKLLIYAASTLHSGVPSRFSGSGSGTEFTLTISSLQPEDFATYYCQQYDNLPLTFGGGTKVEIKGGGGSGGGGSGGGGSEVQLLESGGGLVQPGGSLRLSCAASGFTFSSYAMSWVRQAPGKGLEWVSAIDANGNTYYPDSVKGRFTISRDNSKNTLYLQMNSLRAEDTAVYYCARGRYSGYFDYWGQGTLVTVSS",
+      "target_tag": "PNE",
+      "type": "scFv",
+      "source": "sCAR platform, Rodgers et al."
+    },
+    "anti_FITC_scFv": {
+      "name": "Anti-FITC scFv (clone E2)",
+      "sequence": "DIQMTQSPSSLSASVGDRVTITCRASQGIRNDLGWYQQKPGKAPKRLIYAASSLQSGVPSRFSGSGSGTEFTLTISSLQPEDFATYYCLQHNSYPRTFGQGTKVEIKGGGGSGGGGSGGGGSEVQLVESGGGLVQPGRSLRLSCAASGFTFDDYAMHWVRQAPGKGLEWVSGISWNSGRIGYADSVKGRFTISRDNAKNSLYLQMNSLRAEDTALYYCARGRPFDSSGYYYYAMDVWGQGTTVTVSS",
+      "target_tag": "FITC",
+      "type": "scFv",
+      "source": "Kim et al., Lee et al."
+    },
+    "NbALFA": {
+      "name": "NbALFA (anti-ALFA nanobody)",
+      "sequence": "QVQLVESGGGLVQAGGSLRLSCAASGFTFRSFGMSWYRQAPGKEREFVAAINWRGDITRYADSVKGRFTISRDNAKNTVYLQMNSLKPEDTAVYYCAAAGLGTVVSEWDYDYDYWGQGTQVTVSS",
+      "target_tag": "ALFA",
+      "type": "nanobody",
+      "source": "Gotzke et al., 2019, Nat Commun"
+    },
+    "leucine_zipper_BZip": {
+      "name": "BZip (cognate zipper for RZip adapter)",
+      "sequence": "AQLEKELQALEKENAQLEWELQALEKELAQALKKELQANKKELAQLKWELQALKKELAQ",
+      "target_tag": "LeucineZipper",
+      "type": "leucine_zipper",
+      "source": "Cho et al., 2018, Cell (SUPRA CAR)"
+    }
+  },
+  "hinge_domains": {
+    "CD8a": {
+      "name": "CD8α hinge",
+      "sequence": "TTTPAPRPPTPAPTIASQPLSLRPEACRPAAGGAVHTRGLDFACD",
+      "source": "UniProt P01732",
+      "notes": "Most commonly used, flexible"
+    },
+    "IgG4": {
+      "name": "IgG4 Fc hinge",
+      "sequence": "ESKYGPPCPPCPAPEFLGGPSVFLFPPKPKDTLMISRTPEVTCVVVDVSQEDPEVQFNWYVDGVEVHNAKTKPREEQFNSTYRVVSVLTVLHQDWLNGKEYKCKVSNKGLPSSIEKTISKAKGQPREPQVYTLPPSQEEMTKNQVSLTCLVKGFYPSDIAVEWESNGQPENNYKTTPPVLDSDGSFFLYSRLTVDKSRWQEGNVFSCSVMHEALHNHYTQKSLSLSLGK",
+      "source": "UniProt P01861",
+      "notes": "Long hinge, used in anti-CD19 CARs"
+    },
+    "CD28_hinge": {
+      "name": "CD28 hinge",
+      "sequence": "IEVMYPPPYLDNEKSNGTIIHVKGKHLCPSPLFPGPSKP",
+      "source": "UniProt P10747",
+      "notes": "Short hinge, often paired with CD28 TM"
+    }
+  },
+  "transmembrane_domains": {
+    "CD8a_TM": {
+      "name": "CD8α transmembrane",
+      "sequence": "IYIWAPLAGTCGVLLLSLVITLYC",
+      "source": "UniProt P01732",
+      "notes": "Standard TM, commonly paired with CD8α hinge"
+    },
+    "CD28_TM": {
+      "name": "CD28 transmembrane",
+      "sequence": "FWVLVVVGGVLACYSLLVTVAFIIFWV",
+      "source": "UniProt P10747",
+      "notes": "Often paired with CD28 costimulatory domain"
+    }
+  },
+  "costimulatory_domains": {
+    "4_1BB": {
+      "name": "4-1BB (CD137)",
+      "sequence": "KRGRKKLLYIFKQPFMRPVQTTQEEDGCSCRFPEEEEGGCEL",
+      "source": "UniProt Q07011",
+      "notes": "Promotes T cell persistence and memory, reduced exhaustion"
+    },
+    "CD28_costim": {
+      "name": "CD28 costimulatory",
+      "sequence": "RSKRSRLLHSDYMNMTPRRPGPTRKHYQPYAPPRDFAAYRS",
+      "source": "UniProt P10747",
+      "notes": "Rapid expansion, stronger initial activation"
+    },
+    "ICOS": {
+      "name": "ICOS",
+      "sequence": "CWLTKKKYSSSVHDPNGEYMFMRAVNTAKKSRLTDVTL",
+      "source": "UniProt Q9Y6W8",
+      "notes": "Th17 polarization, emerging in clinical studies"
+    }
+  },
+  "signaling_domains": {
+    "CD3z": {
+      "name": "CD3ζ (CD247)",
+      "sequence": "RVKFSRSADAPAYQQGQNQLYNELNLGRREEYDVLDKRRGRDPEMGGKPRRKNPQEGLYNELQKDKMAEAYSEIGMKGERRRGKGHDGLYQGLSTATKDTYDALHMQALPPR",
+      "source": "UniProt P20963",
+      "notes": "Contains 3 ITAMs, essential for T cell activation"
+    }
+  }
+}
