@@ -16,7 +16,6 @@ recognition modular CAR-T constructs.
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-import streamlit.components.v1 as components
 from dataclasses import asdict
 
 # --- Module imports ---
@@ -166,7 +165,7 @@ with st.sidebar:
     for i, step_name in enumerate(STEPS):
         status = step_status(i)
         icon = "✅" if status == "step-done" else ("▶️" if status == "step-active" else "🔒")
-        if st.button(f"{icon} {step_name}", key=f"nav_{i}", use_container_width=True):
+        if st.button(f"{icon} {step_name}", key=f"nav_{i}", width="stretch"):
             st.session_state.current_step = i
 
     st.markdown("---")
@@ -271,7 +270,7 @@ def render_step1() -> None:
         if info.domains:
             st.markdown("##### Domain Architecture")
             df = pd.DataFrame(info.domains)
-            st.dataframe(df, use_container_width=True, hide_index=True)
+            st.dataframe(df, width="stretch", hide_index=True)
 
         # Extracellular domains
         ec_domains = get_extracellular_domains(info)
@@ -469,7 +468,7 @@ def render_step3() -> None:
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     # Recommendation
     st.markdown("##### 🎯 Quick Recommendation")
@@ -485,7 +484,7 @@ def render_step3() -> None:
     st.markdown("##### Detailed Comparison")
     comp = compare_tags(tag_names)
     df_comp = pd.DataFrame(comp["comparison_table"])
-    st.dataframe(df_comp, use_container_width=True, hide_index=True)
+    st.dataframe(df_comp, width="stretch", hide_index=True)
 
     # Individual tag details
     st.markdown("##### Select a Tag System")
@@ -715,7 +714,7 @@ def render_step5() -> None:
         # Domain table
         st.markdown("##### Domain Architecture")
         df = pd.DataFrame(summary["domains"])
-        st.dataframe(df, use_container_width=True, hide_index=True)
+        st.dataframe(df, width="stretch", hide_index=True)
 
         # Domain map visual
         st.markdown("##### Domain Map")
@@ -807,7 +806,7 @@ def render_step6() -> None:
         else:
             html = render_3d_viewer(pdb_data, color_scheme=color_scheme)
 
-        components.html(html, height=520)
+        st.html(html, height=520)
 
         # Download PDB
         st.download_button(
@@ -909,7 +908,7 @@ def render_step7() -> None:
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
         # Activation dynamics
         st.markdown("##### ON/OFF Activation Dynamics")
@@ -933,7 +932,7 @@ def render_step7() -> None:
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
         )
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2, width="stretch")
 
         # Safety assessment
         st.markdown("##### Safety Assessment")
@@ -948,9 +947,9 @@ def render_step7() -> None:
         # Full report table
         with st.expander("📋 Full PK Report"):
             df_report = pd.DataFrame(
-                [{"Parameter": k, "Value": v} for k, v in report.items()]
+                [{"Parameter": k, "Value": str(v)} for k, v in report.items()]
             )
-            st.dataframe(df_report, use_container_width=True, hide_index=True)
+            st.dataframe(df_report, width="stretch", hide_index=True)
 
         st.success("🎉 **Pipeline Complete!** All 7 steps have been executed.")
 
