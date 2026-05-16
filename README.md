@@ -13,7 +13,6 @@
 
 ![NanoCAR Designer — Pipeline Complete](assets/demo.png)
 
-![NanoCAR Designer — Pipeline Complete](assets/demo.png)
 
 ## Motivation
 
